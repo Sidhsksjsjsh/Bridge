@@ -15,10 +15,17 @@ _G.Run = value
 end)
 
 Tab1:CreateToggle("Auto Buy Speed", function(value)
-_G.Buy = value
+_G.Buy_1 = value
     while wait() do
-      if _G.Buy == false then break end
+      if _G.Buy_1 == false then break end
       game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.SpeedService.RF.Purchase:InvokeServer("SpeedPurchase3")
+      end
+end)
+
+Tab1:CreateToggle("Auto Buy Bridge", function(value)
+_G.Buy_2 = value
+    while wait() do
+      if _G.Buy_2 == false then break end
       game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.BridgeService.RF.Purchase:InvokeServer("BridgePurchase3")
     end
 end)
