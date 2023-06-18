@@ -14,11 +14,18 @@ _G.Run = value
     end
 end)
 
-Tab1:CreateToggle("Auto Buy", function(value)
-_G.Buy = value
+Tab1:CreateToggle("Auto Buy Speed", function(value)
+_G.BuySpeed = value
     while wait() do
-      if _G.Buy == false then break end
+      if _G.BuySpeed == false then break end
       game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.SpeedService.RF.Purchase:InvokeServer("SpeedPurchase3")
+      end
+end)
+
+Tab1:CreateToggle("Auto Buy Bridge", function(value)
+_G.BuyBridge = value
+    while wait() do
+      if _G.BuyBridge == false then break end
       game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.SpeedService.RF.Purchase:InvokeServer("BridgePurchase3")
     end
 end)
@@ -32,5 +39,5 @@ _G.Rb = value
 end)
 
 Tab1:CreateButton("Infinite Gems", function()
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.EggService.RF.Egg:InvokeServer("Open",{"DesertEgg",-99999999999})
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.EggService.RF.Egg:InvokeServer("Open",{"DesertEgg",-99999999999999999999999999999})
 end)
