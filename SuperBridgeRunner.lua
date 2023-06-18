@@ -1,6 +1,6 @@
 local Library = 
 loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
-local Window_1 = Library:NewWindow("London Bridge")
+local Window_1 = Library:NewWindow("Super Bridge Runner")
 
 local Tab1 = Window_1:NewSection("Main")
 
