@@ -27,7 +27,7 @@ Tab1:CreateToggle("Auto Rebirth", function(value)
 _G.Rb = value
     while wait() do
       if _G.Rb == false then break end
-      game:GetService("ReplicatedStorage").Packages._Index:WaitForChild("kumarion_knit-rojo@0.2.0"):WaitForChild("knit-rojo").Services.RebirthService.RF.Rebirth:InvokeServer()
+      game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("kumarion_knit-rojo@0.2.0"):FindFirstChild("knit-rojo").Services.RebirthService.RF.Rebirth:InvokeServer()
     end
 end)
 
